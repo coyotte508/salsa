@@ -5,12 +5,15 @@ var browser = Nightmare({ show: true });
 
 async function run() {
   try {
+    console.log("Connection à la page de test...");
     await browser.goto('http://novelupdates.com');
 
-    if (await browser.exists('#search_form_input_homepage')) {
+    if (await browser.exists('.newfrmposts')) {
       console.log("Déjà connecté à internet");
       return;
     }
+
+    console.log("connecté!");
 
     //assert(await browser.exists('input[name="username"]'), "Pas d'endroit où mettre le login");
 
