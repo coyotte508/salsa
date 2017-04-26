@@ -19,14 +19,13 @@ async function run() {
     //assert(await browser.exists('input[name="username"]'), "Pas d'endroit où mettre le login");
 
     let username = await prompt("username: ");
+    await browser.type('input[name="username"]', username);
+
     let password = await prompt.password("password: ");
+    await browser.type('input[name="password"]', password);
 
-    await browser.evaluate((user, pass) => {
-      document.querySelector('input[name="username"]').value = user;
-      document.querySelector('input[name="password"]').value = pass;
 
-      submitAction();
-    }, username, password);
+    await browser.evaluate(() => submitAction());
 
     console.log ("Submit effectué!");
 
