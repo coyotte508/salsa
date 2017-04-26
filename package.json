@@ -1,0 +1,24 @@
+{
+  "name": "salsa",
+  "version": "1.0.0",
+  "description": "salsaaa",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coyotte508/salsa.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coyotte508/salsa/issues"
+  },
+  "homepage": "https://github.com/coyotte508/salsa#readme",
+  "dependencies": {
+    "assert": "^1.4.1",
+    "nightmare": "^2.10.0",
+    "prompt-promise": "^1.0.3"
+  }
+}
