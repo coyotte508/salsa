@@ -26,6 +26,8 @@ async function run() {
 
     console.log ("Submit effectué!");
 
+    await browser.end();
+
   } catch(err) {
     console.error(err);
   }
