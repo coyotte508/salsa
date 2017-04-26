@@ -5,11 +5,12 @@ var browser = Nightmare({ show: true });
 
 async function run() {
   try {
-    console.log("Connection à la page de test...");
+    console.log("Connexion à la page de test...");
     await browser.goto('http://novelupdates.com');
 
     if (await browser.exists('.newfrmposts')) {
       console.log("Déjà connecté à internet");
+      await browser.end();
       return;
     }
 
